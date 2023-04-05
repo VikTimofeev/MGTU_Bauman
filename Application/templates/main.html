@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  
+</style></head><body><em></em>
+<table style="text-align: left; width: 990px; height: 600px;" bgcolor="#339999" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <th colspan="2" rowspan="1" style="vertical-align: middle; text-align: center; height: 131px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><span style="font-size: 18px;">Прогнозирование свойств композитных материалов<br>
+                «Модуль упругости при растяжении и Прочность при растяжении»</span></span></span></th>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="3" style="vertical-align: top; height: 661px;"><br>
+        <form action="{{url_for('main')}}" method="post">
+          <table style="width: 480px; height: 476px; text-align: left;" border="1" bordercolor="#339999" cellpadding="5" cellspacing="5"><tbody>
+          
+              </tbody>
+            <tbody>
+              <tr>
+                <td style="font-weight: bold;"><big><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><label for="input_parameter0">Выберите модель регрессии для расчета:
+                  <br> 1 - Линейная регрессия
+                  <br> 2 - К-ближайших соседей
+                  <br> 3 - Лассо
+                  <br> 4 - Градиентный бустинг
+                </label></span></span></span></big></td>
+                <td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="input_parameter0" type="number" required></span></span></td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;"><big><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><label for="input_parameter1">Соотношение матрица-наполнитель</label></span></span></span></big></td>
+                <td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="input_parameter1" type="float" required></span></span></td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;"><big><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><label for="input_parameter2">Плотность, кг/м3</label></span></span></span></big></td>
+                <td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="input_parameter2" type="float" required></span></span></td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;"><big><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><label for="input_parameter3">Модуль упругости, ГПа</label> </span></span></span></big></td>
+                <td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="input_parameter3" type="float" required></span></span></td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;"><big><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><label for="input_parameter4">Количество отвердителя, м.%</label> </span></span></span></big></td>
+                <td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="input_parameter4" type="float" required></span></span></td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;"><big><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><label for="input_parameter5">Содержание эпоксидных групп,%</label></span></span></span></big></td>
+                <td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><input name="input_parameter5" type="float" required></span></span></span></td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;"><big><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><label for="input_parameter6">Температура вспышки, С</label> </span></span></span></big></td>
+                <td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="input_parameter6" type="float" required></span></span></td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;"><big><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><label for="input_parameter7">Поверхностная плотность, г/м2</label></span></span></span></big></td>
+                <td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="input_parameter7" type="float" required></span></span></td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;"><big><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><label for="input_parameter8">Потребление смолы, г/м2</label></span></span></span></big></td>
+                <td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="input_parameter8" type="float" required></span></span></td>
+              </tr>
+              
+              <tr>
+                <td style="font-weight: bold;"><big><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><label for="input_parameter10">Угол нашивки, град</label> </span></span></span></big></td>
+                <td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="input_parameter10" type="float" required></span></span></td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;"><big><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><label for="input_parameter11">Шаг нашивки</label></span></span></span></big></td>
+                <td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="input_parameter11" type="float" required></span></span></td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;"><big><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><label for="input_parameter12">Плотность нашивки</label></span></span></span></big></td>
+                <td><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><input name="input_parameter12" type="float" required></span></span></td>
+              </tr>
+            </tbody>
+          </table>
+          <table align="center" bgcolor="#339999" border="3" cellpadding="5" cellspacing="5" width="500">
+            <tbody>
+              <tr>
+                <td style="text-align: center;"><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><span style="font-size: 16px;"><span style="font-family: Times New Roman,Times,serif;"><p>
+                      <input value="Рассчитать" type="submit">
+                      </p></span></span></span></span></td>
+              </tr>
+            </tbody>
+          </table>
+          
+              </form>
+      </td>
+      <td style="vertical-align: top;"><br>
+        
+        
+    
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><br>
+        <table align="center" bgcolor="#339999" border="3" cellpadding="5" cellspacing="5" width="500">
+          <tbody>
+            <tr>
+              <th align="center"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);"><span style="font-size: 16px;">Расчетные значения:</span></span></span></th>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; height: 661px;"><br>
+        <table align="center" bgcolor="#339999" border="3" cellpadding="5" cellspacing="5" width="500">
+          <tbody>
+            <tr>
+              <th align="center"><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);">{% if result %} </span></span><p><span style="font-family: Times New Roman,Times,serif;"><span style="color: rgb(255, 255, 255);">{{ result }}</span></span></p>
+              <span style="font-family: Times New Roman,Times,serif;"> <span style="color: rgb(255, 255, 255);">{% endif %} </span></span>
+        
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+</body></html>
